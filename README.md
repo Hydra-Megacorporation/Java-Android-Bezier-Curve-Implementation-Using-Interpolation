@@ -1,7 +1,7 @@
 # Java-Android-Bezier-Curve-Implementation-Using-Interpolation
 Bezier curve implementation from scratch in Java android using interpolation.<br />
 # Description
-The **linear interpolatioin** is:<br />
+**Linear interpolation** also known as **lerp** function in programming languages::<br />
 ```java
 public Point linearInterpolation(float t, Point start, Point stop) {
   float Px = (1 - t) * start.x + t * stop.x;
