@@ -26,6 +26,8 @@ then the **linearInterpolation function** will return us the point between A and
 (150,150)
 ```
 # Examples
+According to the rule **t**, it should be between **0 < t <1** or equal to **t = 0** or **t = 1**, but not **0 > t > 1**.<br />
+
 Example №1:<br />
 ```java
 float t = 0.664f;
@@ -52,6 +54,43 @@ Point B = new Point(100, 0);
 Point C = linearInterpolation(t, A, B);
 System.out.println("C(x=" + C.x + ", y=" + C.y + ")");
 // Output:  C(x=50, y=50)
+```
+
+if **t<0**:
+```java
+float t = -0.5f;
+Point A = new Point(0, 100);
+Point B = new Point(100, 0);
+Point C = linearInterpolation(t, A, B);
+System.out.println("C(x=" + C.x + ", y=" + C.y + ")");
+// Output: C(x=-50,y=150)
+```
+if **t=0**:
+```java
+float t = 0.0f;
+Point A = new Point(0, 100);
+Point B = new Point(100, 0);
+Point C = linearInterpolation(t, A, B);
+System.out.println("C(x=" + C.x + ", y=" + C.y + ")");
+// Output: C(x=0,y=100)
+```
+if **t=1**:
+```java
+float t = 1.0f;
+Point A = new Point(0, 100);
+Point B = new Point(100, 0);
+Point C = linearInterpolation(t, A, B);
+System.out.println("C(x=" + C.x + ", y=" + C.y + ")");
+// Output: C(x=100,y=0)
+```
+if **t>1**:
+```java
+float t = 1.5f;
+Point A = new Point(0, 100);
+Point B = new Point(100, 0);
+Point C = linearInterpolation(t, A, B);
+System.out.println("C(x=" + C.x + ", y=" + C.y + ")");
+// Output: C(x=150,y=-50)
 ```
 # Demonstration:
 https://youtube.com/shorts/xUuIoobyBQQ?feature=share
